@@ -32,7 +32,7 @@ plt.ylabel('Digit');
 
 
 ```python
-# Convert to volt : 0 -> 0V, 1023 -> 5V
+# Convert to volt : 0 -> 0V, 1023 -> (5 - 5/2^10)V
 volts = digits/1023*(5 - 5/2**10) 
 slope, intercept, r_value, p_value, std_err = stats.linregress(masses, volts)
 
