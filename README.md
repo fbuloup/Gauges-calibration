@@ -42,7 +42,7 @@ plt.text(0, 4.4, '$R^2 = ' + ('%.5f' % r_value**2) + "$", fontsize=12)
 plt.text(0, 4.1, '$volt = ' + ('%.5f' % slope) + "\cdot mass + " + ('%.5f' % intercept) + "$", fontsize=12)
 plt.title('Raw data and linear regression in volts')
 plt.xlabel('mass (g)')
-plt.ylabel('Digit');
+plt.ylabel('Volt');
 ```
 
 
