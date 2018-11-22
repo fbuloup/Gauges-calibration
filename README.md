@@ -34,6 +34,9 @@ plt.ylabel('Digit');
 ```python
 # Convert to volt : 0 -> 0V, 1023 -> (5 - 5/2^10)V
 volts = digits/1023*(5 - 5/2**10) 
+# It's not mandatory to redo linear regression. 
+# One could directly apply this transformation (digit to volt) to previous linear regression equation.
+# It's not the choice i have done here...
 slope, intercept, r_value, p_value, std_err = stats.linregress(masses, volts)
 
 # Linear regression and plots with volts
