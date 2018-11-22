@@ -32,7 +32,7 @@ plt.ylabel('Digit');
 
 
 ```python
-# Convert to volt : 0 -> 0V, 1023 -> (5 - 5/2^10)V
+# Convert digit to volt : 0 -> 0V, 1023 -> (5 - 5/2^10)V
 volts = digits/1023*(5 - 5/2**10) 
 # It's not mandatory to redo linear regression. 
 # One could directly apply this transformation (digit to volt) to previous linear regression equation.
