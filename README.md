@@ -51,3 +51,108 @@ plt.ylabel('Volt');
 
 ![png](output_1_0.png)
 
+
+# Four other gauges, amplified using INA125AP with 6.0Vcc
+
+
+```python
+%matplotlib inline
+import matplotlib.pyplot as plt
+plt.rcParams["figure.figsize"] = (20,6)
+import numpy as np
+from scipy import stats
+
+# Raw data : masses (g) and volts (between 0 and 5V)
+l1 = 10; v1 = 0.07;   # Mass is 10g
+l2 = 100; v2 = 0.69;  # Mass is 100g
+l3 = 300; v3 = 2.5;  # Mass is 30g
+l4 = 400; v4 = 3.47;  # Mass is 400g
+masses = np.array([l1, l2, l3, l4])
+volts = np.array([v1, v2, v3, v4])
+
+# Linear regression and plots with volts
+slope, intercept, r_value, p_value, std_err = stats.linregress(masses,volts)
+plt.plot(masses, volts, 'or', masses, slope*masses + intercept)
+plt.text(0, 3.25, '$R^2 = ' + ('%.5f' % r_value**2) + "$", fontsize=12)
+plt.text(0, 3., '$volt = ' + ('%.5f' % slope) + "\cdot mass + " + ('%.5f' % intercept) + "$", fontsize=12)
+plt.title('Raw data and linear regression in volts')
+plt.xlabel('mass (g)')
+plt.ylabel('Volt');
+```
+
+
+![png](output_1_0.png)
+
+
+
+```python
+# Raw data : masses (g) and volts (between 0 and 5v)
+l1 = 10; v1 = 0.13;   # Mass is 10g
+l2 = 100; v2 = 1.03;  # Mass is 100g
+l3 = 300; v3 = 2.93;  # Mass is 30g
+l4 = 400; v4 = 3.94;  # Mass is 400g
+masses = np.array([l1, l2, l3, l4])
+volts = np.array([v1, v2, v3, v4])
+
+# Linear regression and plots with digits
+slope, intercept, r_value, p_value, std_err = stats.linregress(masses,volts)
+plt.plot(masses, volts, 'or', masses, slope*masses + intercept)
+plt.text(0, 3.75, '$R^2 = ' + ('%.5f' % r_value**2) + "$", fontsize=12)
+plt.text(0, 3.5, '$volt = ' + ('%.5f' % slope) + "\cdot mass + " + ('%.5f' % intercept) + "$", fontsize=12)
+plt.title('Raw data and linear regression in volts')
+plt.xlabel('mass (g)')
+plt.ylabel('Volt');
+```
+
+
+![png](output_2_0.png)
+
+
+
+```python
+# Raw data : masses (g) and volts (between 0 and 5V)
+l1 = 10; v1 = 1.28;   # Mass is 10g
+l2 = 100; v2 = 1.93;  # Mass is 100g
+l3 = 300; v3 = 3.26;  # Mass is 30g
+l4 = 400; v4 = 3.97;  # Mass is 400g
+masses = np.array([l1, l2, l3, l5])
+volts = np.array([v1, v2, v3, v4])
+
+# Linear regression and plots with digits
+slope, intercept, r_value, p_value, std_err = stats.linregress(masses,volts)
+plt.plot(masses, volts, 'or', masses, slope*masses + intercept)
+plt.text(0, 3.75, '$R^2 = ' + ('%.5f' % r_value**2) + "$", fontsize=12)
+plt.text(0, 3.5, '$volt = ' + ('%.5f' % slope) + "\cdot mass + " + ('%.5f' % intercept) + "$", fontsize=12)
+plt.title('Raw data and linear regression in volts')
+plt.xlabel('mass (g)')
+plt.ylabel('Volt');
+```
+
+
+![png](output_3_0.png)
+
+
+
+```python
+# Raw data : masses (g) and volts (between 0 and 5V)
+l1 = 10; v1 = 0.22;   # Mass is 10g
+l2 = 100; v2 = 1.25;  # Mass is 100g
+l3 = 300; v3 = 3.36;  # Mass is 30g
+l4 = 400; v4 = 4.5;  # Mass is 400g
+masses = np.array([l1, l2, l3, l4])
+volts = np.array([v1, v2, v3, v4])
+
+# Linear regression and plots with digits
+slope, intercept, r_value, p_value, std_err = stats.linregress(masses,volts)
+plt.plot(masses, volts, 'or', masses, slope*masses + intercept)
+plt.text(0, 4.25, '$R^2 = ' + ('%.5f' % r_value**2) + "$", fontsize=12)
+plt.text(0, 4, '$digit = ' + ('%.5f' % slope) + "\cdot mass + " + ('%.5f' % intercept) + "$", fontsize=12)
+plt.title('Raw data and linear regression in volts')
+plt.xlabel('mass (g)')
+plt.ylabel('Volt');
+```
+
+
+![png](output_4_0.png)
+
+
