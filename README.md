@@ -81,7 +81,7 @@ plt.ylabel('Volt');
 ```
 
 
-![png](output_1_0.png)
+![png](output_2_0.png)
 
 
 
@@ -105,7 +105,7 @@ plt.ylabel('Volt');
 ```
 
 
-![png](output_2_0.png)
+![png](output_3_0.png)
 
 
 
@@ -129,7 +129,7 @@ plt.ylabel('Volt');
 ```
 
 
-![png](output_3_0.png)
+![png](output_4_0.png)
 
 
 
