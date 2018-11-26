@@ -1,4 +1,4 @@
-# Strain gauges calibration
+# Strain gauges calibration unsing INA125AP Amplifier, powered with 5.25Vcc
 
 ```python
 %matplotlib inline
