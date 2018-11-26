@@ -1,4 +1,4 @@
-# Strain gauge calibration
+# Strain gauges calibration
 
 ```python
 %matplotlib inline
